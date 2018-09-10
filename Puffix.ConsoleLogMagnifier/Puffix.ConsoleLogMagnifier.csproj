@@ -1,0 +1,16 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netstandard2.0</TargetFramework>
+    <SignAssembly>true</SignAssembly>
+    <AssemblyOriginatorKeyFile>Key.pfx</AssemblyOriginatorKeyFile>
+    <Authors>Romain Ehret</Authors>
+    <Product>ConsoleLogMagnifier</Product>
+    <Company>Romain Ehret</Company>
+    <Copyright>Copyright 2018 (c) Romain Ehret. All rights reserved.</Copyright>
+    <Description>Magnify your log in your Console App, int .Net and .Net Core.</Description>
+    <PackageTags>Console Log .Net Core</PackageTags>
+    <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
+  </PropertyGroup>
+
+</Project>
