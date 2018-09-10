@@ -11,6 +11,8 @@
     <Description>Magnify your log in your Console App, int .Net and .Net Core.</Description>
     <PackageTags>Console Log .Net Core</PackageTags>
     <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
+    <RepositoryUrl>https://github.com/EhRom/ConsoleLogMagnifier</RepositoryUrl>
+    <PackageProjectUrl>https://github.com/EhRom/ConsoleLogMagnifier</PackageProjectUrl>
   </PropertyGroup>
 
 </Project>
