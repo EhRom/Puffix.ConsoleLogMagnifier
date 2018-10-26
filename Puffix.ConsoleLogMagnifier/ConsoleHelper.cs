@@ -3,16 +3,27 @@
 namespace Puffix.ConsoleLogMagnifier
 {
     /// <summary>
-    /// Helper to magnify logs in your Console Application (.Net and .Net Core.
+    /// Helper to magnify logs in your Console Application (.Net and .Net Core).
     /// </summary>
     public static class ConsoleHelper
     {
         /// <summary>
         /// Add new line.
         /// </summary>
-        public static void WriteLine()
+        [Obsolete("Use WriteNewLine instead.")]
+        public static void WriteLine(uint lineCount = 1)
         {
-            Console.WriteLine();
+                Console.WriteLine();
+        }
+        /// <summary>
+        /// Add new line.
+        /// </summary>
+        public static void WriteNewLine(uint lineCount = 1)
+        {
+            for (uint i = 0; i < lineCount; i++)
+            {
+                Console.WriteLine();
+            }
         }
 
         /// <summary>
@@ -34,21 +45,21 @@ namespace Puffix.ConsoleLogMagnifier
         }
 
         /// <summary>
-        /// Display success message.
-        /// </summary>
-        /// <param name="message">Message.</param>
-        public static void WriteSuccess(string message)
-        {
-            CoreWriteMessage(ConsoleColor.Green, message);
-        }
-
-        /// <summary>
         /// Display information message.
         /// </summary>
         /// <param name="message">Message.</param>
         public static void WriteInfo(string message)
         {
             CoreWriteMessage(ConsoleColor.Cyan, message);
+        }
+
+        /// <summary>
+        /// Display success message.
+        /// </summary>
+        /// <param name="message">Message.</param>
+        public static void WriteSuccess(string message)
+        {
+            CoreWriteMessage(ConsoleColor.Green, message);
         }
 
         /// <summary>
@@ -75,6 +86,19 @@ namespace Puffix.ConsoleLogMagnifier
         /// <param name="error">Error.</param>
         public static void WriteError(Exception error)
         {
+            CoreWriteMessage(ConsoleColor.Red, $"Date : {DateTime.Now} - Type : {error.GetType()} / Message : {error.Message}");
+            if (error.InnerException != null)
+                WriteError(error.InnerException);
+        }
+        
+        /// <summary>
+        /// Display error.
+        /// </summary>
+        /// <param name="message">Message.</param>
+        /// <param name="error">Error.</param>
+        public static void WriteError(string message, Exception error)
+        {
+            CoreWriteMessage(ConsoleColor.Red, message);
             CoreWriteMessage(ConsoleColor.Red, $"Date : {DateTime.Now} - Type : {error.GetType()} / Message : {error.Message}");
             if (error.InnerException != null)
                 WriteError(error.InnerException);
