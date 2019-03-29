@@ -13,10 +13,10 @@
     <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
     <RepositoryUrl>https://github.com/EhRom/ConsoleLogMagnifier</RepositoryUrl>
     <PackageProjectUrl>https://github.com/EhRom/ConsoleLogMagnifier</PackageProjectUrl>
-    <AssemblyVersion>1.1.0.0</AssemblyVersion>
-    <FileVersion>1.1.0.0</FileVersion>
-    <PackageReleaseNotes>Rename WriteLine to WriteNewLine to avoid confusions with the original WriteLine method</PackageReleaseNotes>
-    <Version>1.1.0</Version>
+    <AssemblyVersion>1.2.0.0</AssemblyVersion>
+    <FileVersion>1.2.0.0</FileVersion>
+    <PackageReleaseNotes>Add methods to remove characters or lines</PackageReleaseNotes>
+    <Version>1.2.0</Version>
   </PropertyGroup>
 
 </Project>

@@ -13,7 +13,7 @@ namespace Puffix.ConsoleLogMagnifier
         [Obsolete("Use WriteNewLine instead.")]
         public static void WriteLine(uint lineCount = 1)
         {
-                Console.WriteLine();
+            Console.WriteLine();
         }
         /// <summary>
         /// Add new line.
@@ -90,7 +90,7 @@ namespace Puffix.ConsoleLogMagnifier
             if (error.InnerException != null)
                 WriteError(error.InnerException);
         }
-        
+
         /// <summary>
         /// Display error.
         /// </summary>
@@ -102,6 +102,36 @@ namespace Puffix.ConsoleLogMagnifier
             CoreWriteMessage(ConsoleColor.Red, $"Date : {DateTime.Now} - Type : {error.GetType()} / Message : {error.Message}");
             if (error.InnerException != null)
                 WriteError(error.InnerException);
+        }
+
+        /// <summary>
+        /// Delete the last characters from the console.
+        /// </summary>
+        /// <param name="charactersCount">Character count to delete.</param>
+        public static void ClearLastCharacters(uint charactersCount = 1)
+        {
+            for (uint i = 0; i < charactersCount; i++)
+            {
+                Console.Write('\b');
+
+            }
+        }
+
+        /// <summary>
+        /// Delete the last lines from the console.
+        /// </summary>
+        /// <param name="lineCount">Line count to delete.</param>
+        public static void ClearLastLines(uint lineCount = 1)
+        {
+            for (uint i = 0; i < lineCount; i++)
+            {
+                Console.SetCursorPosition(0, Console.CursorTop - 1);
+
+                int currentLineCursor = Console.CursorTop;
+                Console.SetCursorPosition(0, Console.CursorTop);
+                Console.Write(new string(' ', Console.WindowWidth));
+                Console.SetCursorPosition(0, currentLineCursor);
+            }
         }
 
         /// <summary>
