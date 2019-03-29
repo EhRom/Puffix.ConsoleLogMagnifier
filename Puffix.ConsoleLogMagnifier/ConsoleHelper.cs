@@ -113,7 +113,6 @@ namespace Puffix.ConsoleLogMagnifier
             for (uint i = 0; i < charactersCount; i++)
             {
                 Console.Write('\b');
-
             }
         }
 
