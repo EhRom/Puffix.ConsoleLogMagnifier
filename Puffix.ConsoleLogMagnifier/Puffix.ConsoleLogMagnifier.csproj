@@ -11,7 +11,7 @@
     <Description>Magnify your log in your Console App, int .Net and .Net Core.</Description>
     <PackageTags>Console Log .Net Core</PackageTags>
     <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
-    <RepositoryUrl>C:\Projets\Framework\Puffix.Exceptions\Puffix.Exceptions\Licence.txt</RepositoryUrl>
+    <RepositoryUrl>https://github.com/EhRom/Puffix.ConsoleLogMagnifier</RepositoryUrl>
     <PackageProjectUrl>https://github.com/EhRom/Puffix.ConsoleLogMagnifier</PackageProjectUrl>
     <AssemblyVersion>1.3.0.0</AssemblyVersion>
     <FileVersion>1.3.0.0</FileVersion>
