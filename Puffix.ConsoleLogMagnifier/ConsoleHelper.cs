@@ -10,14 +10,6 @@ namespace Puffix.ConsoleLogMagnifier
         /// <summary>
         /// Add new line.
         /// </summary>
-        [Obsolete("Use WriteNewLine instead.")]
-        public static void WriteLine(uint lineCount = 1)
-        {
-            Console.WriteLine();
-        }
-        /// <summary>
-        /// Add new line.
-        /// </summary>
         public static void WriteNewLine(uint lineCount = 1)
         {
             for (uint i = 0; i < lineCount; i++)
