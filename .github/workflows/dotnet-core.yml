@@ -23,6 +23,10 @@ jobs:
       run: dotnet build --configuration Release --no-restore
     - name: Test
       run: dotnet test --no-restore --verbosity normal
+    - name: List Files
+      uses: Azure/powershell@v1
+      with:
+        inlineScript: dir
     - name: Publish Nuget Package
       uses: brandedoutcast/publish-nuget@v2.5.5
       with:
