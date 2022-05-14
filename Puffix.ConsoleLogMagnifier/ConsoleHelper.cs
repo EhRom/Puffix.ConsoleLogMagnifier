@@ -28,6 +28,16 @@ namespace Puffix.ConsoleLogMagnifier
         }
 
         /// <summary>
+        /// Display message.
+        /// </summary>
+        /// <param name="textColor">Color of the text to display</param>
+        /// <param name="message">Message.</param>
+        public static void Write(ConsoleColor textColor, string message)
+        {
+            CoreWriteMessage(textColor, message);
+        }
+
+        /// <summary>
         /// Display verbose message.
         /// </summary>
         /// <param name="message">Message.</param>
@@ -46,6 +56,30 @@ namespace Puffix.ConsoleLogMagnifier
         }
 
         /// <summary>
+        /// Display error as information.
+        /// </summary>
+        /// <param name="error">Error.</param>
+        public static void WriteInfo(Exception error)
+        {
+            CoreWriteMessage(ConsoleColor.Cyan, $"Date : {DateTime.Now} - Type : {error.GetType()} / Message : {error.Message}");
+            if (error.InnerException != null)
+                WriteInfo(error.InnerException);
+        }
+
+        /// <summary>
+        /// Display error as information.
+        /// </summary>
+        /// <param name="message">Message.</param>
+        /// <param name="error">Error.</param>
+        public static void WriteInfo(string message, Exception error)
+        {
+            CoreWriteMessage(ConsoleColor.Cyan, message);
+            CoreWriteMessage(ConsoleColor.Cyan, $"Date : {DateTime.Now} - Type : {error.GetType()} / Message : {error.Message}");
+            if (error.InnerException != null)
+                WriteInfo(error.InnerException);
+        }
+
+        /// <summary>
         /// Display success message.
         /// </summary>
         /// <param name="message">Message.</param>
@@ -61,6 +95,30 @@ namespace Puffix.ConsoleLogMagnifier
         public static void WriteWarning(string message)
         {
             CoreWriteMessage(ConsoleColor.Yellow, message);
+        }
+
+        /// <summary>
+        /// Display error as warning.
+        /// </summary>
+        /// <param name="error">Error.</param>
+        public static void WriteWarning(Exception error)
+        {
+            CoreWriteMessage(ConsoleColor.Yellow, $"Date : {DateTime.Now} - Type : {error.GetType()} / Message : {error.Message}");
+            if (error.InnerException != null)
+                WriteWarning(error.InnerException);
+        }
+
+        /// <summary>
+        /// Display error as warning.
+        /// </summary>
+        /// <param name="message">Message.</param>
+        /// <param name="error">Error.</param>
+        public static void WriteWarning(string message, Exception error)
+        {
+            CoreWriteMessage(ConsoleColor.Yellow, message);
+            CoreWriteMessage(ConsoleColor.Yellow, $"Date : {DateTime.Now} - Type : {error.GetType()} / Message : {error.Message}");
+            if (error.InnerException != null)
+                WriteWarning(error.InnerException);
         }
 
         /// <summary>

@@ -1,13 +1,4 @@
-# ConsoleLogMagnifier
-
-Magnify your log in your Console App, in .NET.
-
-[![NuGet version (Puffix.ConsoleLogMagnifier)](https://img.shields.io/nuget/v/Puffix.ConsoleLogMagnifier.svg?style=flat-square)](https://www.nuget.org/packages/Puffix.ConsoleLogMagnifier/)
-[![Build status](https://github.com/EhRom/Puffix.ConsoleLogMagnifier/workflows/.NET%20Core/badge.svg)](https://github.com/EhRom/Puffix.ConsoleLogMagnifier/actions?query=workflow%3A%22.NET+Core%22)
-
-Code sample:
-``` csharp
-using Puffix.ConsoleLogMagnifier;
+﻿using Puffix.ConsoleLogMagnifier;
 
 // Standard behavior
 ConsoleHelper.Write("Write text in white");
@@ -70,8 +61,3 @@ Console.ReadKey();
 ConsoleHelper.ClearLastLines(4);
 
 ConsoleHelper.WriteInfo("End of the program");
-```
-
-Result:
-
-![ConsoleHelper code sample result](./Resources/ConsoleHelper%20code%20sample%20result.png)
