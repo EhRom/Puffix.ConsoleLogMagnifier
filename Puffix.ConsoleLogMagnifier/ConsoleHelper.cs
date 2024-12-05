@@ -197,4 +197,52 @@ public static class ConsoleHelper
 
         Console.ForegroundColor = savedColor;
     }
+
+    /// <summary>
+    /// Read a key entered in the standard input.
+    /// </summary>
+    /// <returns>Last entered key</returns>
+    public static ConsoleKey ReadKey()
+    {
+        ConsoleKey key = Console.ReadKey().Key;
+
+        if (key != ConsoleKey.Escape)
+        {
+            try
+            {
+                Console.SetCursorPosition(1, Console.CursorTop);
+                Console.Write('\b');
+            }
+            catch
+            {
+                // Silent error
+            }
+        }
+        else
+        {
+            try
+            {
+                WriteVerbose($"A");
+                ClearLastLines();
+            }
+            catch
+            {
+                // Silent error
+            }
+        }
+        return key;
+    }
+
+    /// <summary>
+    /// Read a text line entered in the standard input.
+    /// </summary>
+    /// <returns>Last entered text line</returns>
+    public static string ReadLine()
+    {
+        string lineText = Console.ReadLine();
+
+        ClearLastLines();
+
+        return lineText;
+    }
 }

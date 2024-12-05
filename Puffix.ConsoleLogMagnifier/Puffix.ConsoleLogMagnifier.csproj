@@ -13,10 +13,10 @@
 		<GeneratePackageOnBuild>true</GeneratePackageOnBuild>
 		<RepositoryUrl>https://github.com/EhRom/Puffix.ConsoleLogMagnifier</RepositoryUrl>
 		<PackageProjectUrl>https://github.com/EhRom/Puffix.ConsoleLogMagnifier</PackageProjectUrl>
-		<AssemblyVersion>3.3.0.0</AssemblyVersion>
-		<FileVersion>3.3.0.0</FileVersion>
+		<AssemblyVersion>3.3.1.0</AssemblyVersion>
+		<FileVersion>3.3.1.0</FileVersion>
 		<PackageReleaseNotes></PackageReleaseNotes>
-		<Version>3.3.0</Version>
+		<Version>3.3.1</Version>
 		<PackageLicenseFile>Licence.txt</PackageLicenseFile>
 		<PackageIcon>icon.png</PackageIcon>
 		<DelaySign>false</DelaySign>

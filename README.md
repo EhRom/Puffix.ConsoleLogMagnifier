@@ -65,13 +65,35 @@ ConsoleHelper.Write("Write line thre");
 await Task.Delay(1000);
 ConsoleHelper.ClearLastLines();
 ConsoleHelper.Write("Write line three");
+
+ConsoleKey key;
+
+int attempts = 0;
+const int MAX_ATTEMPTS = 5;
+do
+{
+    ConsoleHelper.WriteInfo($"Press C to contninue (attempts {++attempts} / {MAX_ATTEMPTS}).");
+    key = ConsoleHelper.ReadKey();
+
+    ConsoleHelper.WriteVerbose($"The pressed key was: {key}");
+
+} while (key != ConsoleKey.C && attempts < MAX_ATTEMPTS);
+
+
+ConsoleHelper.WriteInfo("Enter a text line.");
+string text = ConsoleHelper.ReadLine();
+
+ConsoleHelper.WriteVerbose($"The entered text was: {text}");
+
+
 ConsoleHelper.WriteVerbose("Press any key when you are ready.");
-Console.ReadKey();
-ConsoleHelper.ClearLastLines(4);
+ConsoleHelper.ReadKey();
+
+ConsoleHelper.ClearLastLines(3);
 
 ConsoleHelper.WriteInfo("End of the program");
 ```
 
 Result:
 
-![ConsoleHelper code sample result](./Resources/ConsoleHelper%20code%20sample%20result.png)
+![ConsoleHelper code sample result](./Resources/ConsoleHelper-SampleResult.png)
