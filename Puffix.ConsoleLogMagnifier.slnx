@@ -1,0 +1,7 @@
+<Solution>
+  <Folder Name="/GithubBuild/">
+    <File Path=".github/workflows/main.yml" />
+  </Folder>
+  <Project Path="Puffix.ConsoleLogMagnifier.TestApp/Puffix.ConsoleLogMagnifier.TestApp.csproj" />
+  <Project Path="Puffix.ConsoleLogMagnifier/Puffix.ConsoleLogMagnifier.csproj" />
+</Solution>
