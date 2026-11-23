@@ -3,7 +3,7 @@
 Magnify your log in your Console App, in .NET.
 
 [![NuGet version (Puffix.ConsoleLogMagnifier)](https://img.shields.io/nuget/v/Puffix.ConsoleLogMagnifier.svg?style=flat-square)](https://www.nuget.org/packages/Puffix.ConsoleLogMagnifier/)
-[![Build status](https://github.com/EhRom/Puffix.ConsoleLogMagnifier/workflows/.NET%20Core/badge.svg)](https://github.com/EhRom/Puffix.ConsoleLogMagnifier/actions?query=workflow%3A%22.NET+Core%22)
+[![Build status](https://github.com/EhRom/Puffix.ConsoleLogMagnifier/actions/workflows/main.yml/badge.svg)](https://github.com/EhRom/Puffix.ConsoleLogMagnifier/actions/workflows/main.yml)
 
 Code sample:
 ``` csharp
